@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Проверка на print() в python-файлах
+if git diff --cached --name-only | grep -E '\.py$' > /dev/null; then
+    if git diff --cached | grep -E "print\("; then
+        echo "❌ Найден print() в коде! Уберите перед коммитом."
+        exit 1
+    fi
+fi
+
+# Проверка на TODO в любых файлах
+if git diff --cached | grep -i "TODO"; then
+    echo "❌ Найден TODO в коде! Уберите или завершите задачу перед коммитом."
+    exit 1
+fi
+
+# Форматирование
+black --check .
+
+echo "Все проверки пройдены! Делаем commit."
+exit 0
