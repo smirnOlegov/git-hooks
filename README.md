@@ -1,5 +1,5 @@
 # git-hooks
-# Git Hooks Example
+# Git Hooks 
 
 Автоматизация проверки кода с помощью Git Hooks.
 
@@ -17,7 +17,7 @@
 ## 🔧 Установка
 1. Склонируйте репозиторий:
    ```bash
-   git clone https://github.com/<ваш-ник>/git-hooks-sample.git
+   git clone https://github.com/smirnOlegov/git-hooks-sample.git
    cd git-hooks-sample
 
 2. Скопируйте хуки:
